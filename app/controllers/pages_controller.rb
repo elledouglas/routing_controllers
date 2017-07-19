@@ -31,10 +31,13 @@ end
 
 def secrets
 if params[:magic_word] == "wild"
-  redirect_to " /secrets/:magic_word"
+  redirect_to gurjant_path(100)
+puts "Welcoe to the dungeon"
 else
   flash[:alert] = "Sorry, you're not authorized to see that page!"
   redirect_to "/welcome"
 end
+end
+
 
 end
